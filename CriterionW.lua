@@ -49,11 +49,11 @@ function CriterionW:cuda()
    return self:type('torch.CudaTensor')
 end
 
-function Criterion:cudaHalf()
+function CriterionW:cudaHalf()
    return self:type('torch.CudaHalfTensor')
 end
 
-function Criterion:cudaDouble()
+function CriterionW:cudaDouble()
    return self:type('torch.CudaDoubleTensor')
 end
 
