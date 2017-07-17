@@ -53,6 +53,10 @@ function Criterion:cudaHalf()
    return self:type('torch.CudaHalfTensor')
 end
 
+function Criterion:cudaDouble()
+   return self:type('torch.CudaDoubleTensor')
+end
+
 function CriterionW:__call__(input, target, spWeights)
    self.output = self:forward(input, target, spWeights)
    self.gradInput = self:backward(input, target, spWeights)
